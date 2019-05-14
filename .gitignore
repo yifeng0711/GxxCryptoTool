@@ -1,0 +1,6 @@
+bin
+source/debug
+source/release
+*.user
+Makefile*
+ui_*
