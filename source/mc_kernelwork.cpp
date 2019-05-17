@@ -3,9 +3,9 @@
 
 #include "GxxGmCryptoEx/include/libGxxGmCryptoEx.h"
 #ifdef _DEBUG
-#pragma comment(lib, "GxxGmCryptoEx/bin/debug/libGxxGmCryptoExd.lib")
+#pragma comment(lib, "GxxGmCryptoEx/lib/debug/libGxxGmCryptoExd.lib")
 #else
-#pragma comment(lib, "GxxGmCryptoEx/bin/release/libGxxGmCryptoEx.lib")
+#pragma comment(lib, "GxxGmCryptoEx/lib/release/libGxxGmCryptoEx.lib")
 #endif
 //------------------------------------------------------------------
 MC_KernelWork::MC_KernelWork(QObject *parent) :
@@ -94,6 +94,18 @@ void MC_KernelWork::SlotGetCipher(QString vPlain, QString &vCipher)
     tCrypto.EncryptPin_v1(vPlain.toStdString(), tCipher, tCertPath.toStdString(), tCertPin.toStdString());
 
     vCipher = QString::fromStdString(tCipher);
+}
+//------------------------------------------------------------------
+void MC_KernelWork::SlotGetSHA256(QString vPlain, QString &vCipher)
+{
+    libGxxGmCryptoEx tCrypto;
+    std::string tMD5Str     = "";
+    std::string tSHA256Str  = "";
+
+    tCrypto.MD5Encryp(vPlain.toStdString(), tMD5Str);
+    tCrypto.SHA256Encryp(tMD5Str, tSHA256Str);
+
+    vCipher = QString::fromStdString(tSHA256Str);
 }
 //------------------------------------------------------------------
 void MC_KernelWork::SlotGetPlain(QString vCipher, QString &vPlain)

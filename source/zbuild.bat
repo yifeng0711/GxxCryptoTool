@@ -8,7 +8,7 @@ rem	_RUNPATH_:	Current Run result path
 rem	_COMPILE_:	Current Module Compile mode
 rem	-------------------------------------------------------------------------
 
-	set _MODNAME_=QTest
+	set _MODNAME_=GxxCryptoTool
 	set _MODTYPE_=exe
 	set _RUNPATH_=..\bin\release
 	set _COMPILE_=Release

@@ -28,6 +28,7 @@ private:
 
 signals:
     void    SignalGetCipher             (QString vPlain,  QString& vCipher);
+    void    SignalGetSHA256             (QString vPlain,  QString& vCipher);
     void    SignalGetPlain              (QString vCipher, QString& vPlain);
 
 private slots:

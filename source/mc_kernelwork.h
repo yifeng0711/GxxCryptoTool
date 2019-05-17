@@ -32,6 +32,7 @@ signals:
 
 private slots:
     void    SlotGetCipher   (QString vPlain,  QString& vCipher);
+    void    SlotGetSHA256   (QString vPlain,  QString& vCipher);
     void    SlotGetPlain    (QString vCipher, QString& vPlain);
     
 };
