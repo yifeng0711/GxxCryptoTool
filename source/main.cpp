@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
     qApp->setStyle(new QPlastiqueStyle);    //美化文本边框
 
     //单实例
-    HANDLE tMutex = CreateMutexA(0, FALSE, "Global\\{C060D808-103E-4ba9-BB71-D189F8170FC7}");
+    HANDLE tMutex = CreateMutexA(0, FALSE, "Global\\{55D15F14-EE32-4E5E-A8F4-2904F3BBB6BF}");
     if (GetLastError() == ERROR_ALREADY_EXISTS)
     {
         CloseHandle(tMutex);
